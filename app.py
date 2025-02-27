@@ -40,7 +40,7 @@ def handle_message(event):
             {"role": "system", "content": "You are a helpful assistant."},
             {
                 "role": "user",
-                "content": "Write a haiku about recursion in programming."
+                "content": user_message
             }
         ]
     )
