@@ -45,7 +45,7 @@ def handle_message(event):
         ]
     )
 
-    print(completion.choices[0].message)
+    print(completion.choices[0].message.content)
 
 if __name__ == "__main__":
     app.run(port=8000)
