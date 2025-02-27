@@ -45,7 +45,11 @@ def handle_message(event):
         ]
     )
 
-    print(completion.choices[0].message.content)
+    reply_message = completion.choices[0].message.content
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=reply_message)
+    )
 
 if __name__ == "__main__":
     app.run(port=8000)
